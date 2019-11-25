@@ -1,2 +1,3 @@
 # itchsblogHA
-Repository per aggregare piccoli o grandi esempi - configurazioni - prove che posso per Home Assistant che possono servire a tutti
+
+![myimage-alt-tag](https://i1.wp.com/www.itchsblog.it/wp-content/uploads/2019/07/cropped-Logo_Blog.png?w=1541&ssl=1)
