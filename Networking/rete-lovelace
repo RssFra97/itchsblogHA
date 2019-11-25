@@ -1,0 +1,23 @@
+  - title: Rete
+    icon: mdi:lan
+    cards:
+          - type: vertical-stack
+            cards:
+                - type: custom:mini-graph-card
+                name: SPEEDTEST
+                icon: mdi:speedometer
+                entities:
+                    - entity: sensor.speedtest_download
+                    name: DOWNLOAD
+                    - entity: sensor.speedtest_upload
+                    name: UPLOAD
+                    - entity: sensor.speedtest_ping
+                    name: PING
+                - type: glance
+                entities:
+                    - sensor.myip
+                    - automation.notify_when_external_ip_changes
+                - type: glance
+                entities:
+                    - sensor.ssl
+                    - automation.let_s_encrypt_renewal

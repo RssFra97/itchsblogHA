@@ -1,0 +1,52 @@
+homeassistant:
+  customize:
+    sensor.myip:   
+        icon: mdi:ip-network
+    automation.notify_when_external_ip_changes:
+        icon: mdi:ip-network-outline   
+sensor:
+  - platform: command_line 
+    name: SSL 
+    unit_of_measurement: giorni 
+    scan_interval: 10800 
+    command: "/config/ssl-cert-check -b -c /ssl/fullchain.pem | awk '{ print  -$6 }'"
+  - platform: dnsip 
+
+ speedtestdotnet:
+  scan_interval:
+    minutes: 10
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+     
+group:
+  manu:
+    name: Manutenzione
+    view: no
+    entities:
+     - sensor.myip
+     - sensor.ssl
+     - automation.let_s_encrypt_renewal
+     - automation.notify_when_external_ip_changes
+    
+automation:
+    - alias: "Let's Encrypt Renewal"
+      trigger:
+      - platform: time
+        at: '00:00:00'
+      action:
+      - service: hassio.addon_restart
+        data:
+          addon: core_letsencrypt
+    - alias: Notify when external ip changes
+      initial_state: on 
+      trigger:
+        platform: state 
+        entity_id: sensor.myip
+      action:
+        data:
+          message: "```informazione IP & SSL:
+            \n  - IP della rete é {{states('sensor.myip')}}.
+            \n  - Mancano {{states('sensor.ssl')}} giorni ai certificati.```"
+        service: notify.ha_notifiche
