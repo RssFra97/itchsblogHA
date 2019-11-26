@@ -3,7 +3,7 @@
     cards:
           - type: vertical-stack
             cards:
-                - type: custom:mini-graph-card
+              - type: custom:mini-graph-card
                 name: SPEEDTEST
                 icon: mdi:speedometer
                 entities:
@@ -13,11 +13,11 @@
                     name: UPLOAD
                     - entity: sensor.speedtest_ping
                     name: PING
-                - type: glance
+              - type: glance
                 entities:
                     - sensor.myip
                     - automation.notify_when_external_ip_changes
-                - type: glance
+              - type: glance
                 entities:
                     - sensor.ssl
                     - automation.let_s_encrypt_renewal
