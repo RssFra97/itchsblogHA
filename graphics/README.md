@@ -9,6 +9,9 @@ Si posteranno da piccole banalità che però l'utente non troverà in rete fino 
 # Tema - ClearItchsblog
 ![myimage-alt-tag](https://github.com/RWGaMeR/itchsblogHA/blob/master/graphics/ClearItchsblog.png)
 
+# Tema - DarkItchsblog
+![myimage-alt-tag](https://github.com/RWGaMeR/itchsblogHA/blob/master/graphics/DarkItchsblog.png)
+
 ![myimage-alt-tag](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png)
 
 Se volete donare per avere più esempi complessi vi lascio il link PayPal https://paypal.me/itchsblog
