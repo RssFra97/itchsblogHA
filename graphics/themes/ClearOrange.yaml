@@ -1,0 +1,26 @@
+ClearOrange:
+      background-image: center / cover no-repeat url("/local/background.jpg") fixed
+      primary-color: "#ff9800"
+      dark-primary-color: "#EC5800"
+      primary-text-color: "#000"
+      secondary-text-color: "#ff9800"
+      text-primary-color: "#000"
+      disabled-text-color: "#555"
+      text-dark-color: "#000"
+      paper-item-icon-active-color: "var(--primary-color)"
+      paper-item-selected_-_background-color: "var(--primary-color)"
+      paper-item-icon-color: "#000000"
+      sidebar-icon-color: "#000000"
+      label-badge-red: "var(--dark-primary-color)"
+      paper-slider-knob-color: "var(--primary-color)"
+      paper-slider-knob-start-color: "var(--primary-color)"
+      paper-slider-pin-color: "var(--primary-color)"
+      paper-slider-active-color: "var(--primary-color)"
+      secondary-text-color: "var(--dark-primary-color)"
+      border-radius: 200px
+      card-background-color: var(--secondary-background-color)  # Unused entities table background
+      paper-listbox-background-color: var(--primary-background-color)
+      ha-card-border-radius: 20px
+      ha-card-background: rgba(255, 255, 255, 0.01)
+      paper-card-background-color: var(--ha-card-background)
+      paper-item-icon-color: "#000"
