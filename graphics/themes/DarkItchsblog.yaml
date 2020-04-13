@@ -42,5 +42,6 @@ DarkItchsblog:
       label-badge-grey: "var(--paper-grey-500)"
       table-row-background-color: "var(--paper-card-background-color)"
       table-row-alternative-background-color: "var(--sidebar-text_-_background)"
+      mini-media-player-icon-color: "#FFF"
       ha-card-border-radius: 20px
       ha-card-background: rgba(0, 0, 0, 0.01)
