@@ -11,6 +11,7 @@ ClearItchsblog:
       paper-item-selected_-_background-color: "var(--primary-color)"
       paper-item-icon-color: "#000000"
       sidebar-icon-color: "#000000"
+      sidebar-background-color: "#FFFFFF"
       label-badge-red: "var(--dark-primary-color)"
       paper-slider-knob-color: "var(--primary-color)"
       paper-slider-knob-start-color: "var(--primary-color)"
