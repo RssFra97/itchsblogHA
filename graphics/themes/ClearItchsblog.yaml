@@ -24,3 +24,4 @@ ClearItchsblog:
       ha-card-background: rgba(255, 255, 255, 0.01)
       paper-card-background-color: var(--ha-card-background)
       paper-item-icon-color: "#000"
+      mini-media-player-icon-color: "#000"
