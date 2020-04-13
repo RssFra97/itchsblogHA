@@ -6,7 +6,7 @@ Qui troverete esempi - configurazioni - prove per Home Assistant e per l'interfa
 
 Si posteranno da piccole banalità che però l'utente non troverà in rete fino a configurazioni complesse che non tutti sono capici di eseguire.
 
-#Tema - ClearItchsblog
+# Tema - ClearItchsblog
 ![myimage-alt-tag](https://github.com/RWGaMeR/itchsblogHA/blob/master/graphics/ClearItchsblog.png)
 
 ![myimage-alt-tag](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png)
