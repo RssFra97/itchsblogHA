@@ -31,6 +31,7 @@ DarkItchsblog:
       paper-item-icon-color: "#FFFFFF"
       paper-item-icon-active-color: "var(--primary-color)"
       sidebar-icon-color: "#FFFFFF"
+      sidebar-background-color: "var(--primary-background-color)"
       paper-grey-50: "var(--sidebar-text_-_background)"
       paper-grey-200: "var(--primary-background-color)"
       label-badge-background-color: "var(--sidebar-text_-_background)"
