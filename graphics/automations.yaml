@@ -5,8 +5,7 @@
     platform: time
   condition: []
   action:
-  - alias: ''
-    data_template:
+  - data_template:
       name: DarkItchsblog
     service: frontend.set_theme
 - id: '1525623631151'
