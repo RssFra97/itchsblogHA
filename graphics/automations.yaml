@@ -1,0 +1,47 @@
+- id: '1525623474483'
+  alias: Impostazione Tema BlackItchsblog 20:00
+  trigger:
+  - at: '20:00'
+    platform: time
+  condition: []
+  action:
+  - alias: ''
+    data_template:
+      name: DarkItchsblog
+    service: frontend.set_theme
+- id: '1525623631151'
+  alias: Impostazione Tema ClearItchsblog 08:00
+  trigger:
+  - at: 08:00
+    platform: time
+  condition: []
+  action:
+  - data_template:
+      name: ClearItchsblog
+    service: frontend.set_theme
+- id: '1525626613659'
+  alias: Avvio Tema ClearItchsblog
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - after: 08:00
+    before: '20:00'
+    condition: time
+  action:
+  - data_template:
+      name: ClearItchsblog
+    service: frontend.set_theme
+- id: '1536832689629'
+  alias: Avvio Tema DarkItchsblog
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - after: '20:00'
+    before: 08:00
+    condition: time
+  action:
+  - data_template:
+      name: DarkItchsblog
+    service: frontend.set_theme
