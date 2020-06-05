@@ -1,20 +1,3 @@
-preload_cards:
-  - markdown
-  - gauge
-  - hui-mini-media-player-bundle
-  - hui-roku-card
-  - hui-card-modder
-  - hui-card-tools
-  - hui-weather-card
-  - hui-thermostat-card
-  - hui-calendar-card
-  - hui-popup-card
-  - hui-alarm-panel-card
-  - hui-mini-graph-card
-  - hui-custom-header
-  - hui-spotify-playlist-card
-preload_rows:
-  - divider
 custom_header:
   background: 'rgba(255, 152, 0, 0.01)'
   swipe_animate: fade
@@ -23,6 +6,31 @@ custom_header:
   button_icons:
     voice: mdi:microphone
     options: mdi:dots-vertical
+resources:
+  - url: /local/community/lovelace-card-preloader/lovelace-card-preloader.js
+    type: js
+  - url: /local/lovelace/card/mini-graph-card-bundle.js
+    type: module
+  - url: /local/community/mini-media-player/mini-media-player-bundle.js
+    type: module
+  - url: /local/community/roku-card/roku-card.js
+    type: module
+  - url: /local/lovelace/card/card-modder.js?v=1
+    type: js
+  - url: /local/lovelace/card/card-tools.js?track=true
+    type: js
+  - url: /local/lovelace/card/weather-card/dist/weather-card.js
+    type: js
+  - url: /local/lovelace/card/thermostat-card/thermostat-card.js
+    type: module
+  - url: /local/lovelace/card/calendar-card.js
+    type: js
+  - url: /local/lovelace/card/popup-card.js
+    type: js
+  - url: /community_plugin/custom-header/custom-header.js
+    type: module
+  - url: /local/community/spotify-playlist-card/spotify-playlist-card.js
+    type: js
 title: Home
 background: var(--background-image)
 views:
