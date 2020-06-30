@@ -52,7 +52,7 @@ views:
               entities:
                 - calendar.festivita_in_italia
                 - calendar.le_partite_della_juventus_vecchiasignoracom
-                - calendar.puxxo9700gmailcom
+                - calendar.p
             - type: glance
               entities:
                 - sensor.plex
