@@ -5,7 +5,7 @@ ClearItchsblog:
       primary-text-color: "#000"
       secondary-text-color: "#ff9800"
       text-primary-color: "#000"
-      disabled-text-color: "#555"
+      disabled-text-color: "##ff9800"
       text-dark-color: "#000"
       paper-item-icon-active-color: "var(--primary-color)"
       paper-item-selected_-_background-color: "var(--primary-color)"
