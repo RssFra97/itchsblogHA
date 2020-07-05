@@ -6,7 +6,7 @@ DarkItchsblog:
       primary-text-color: "#fff"
       secondary-text-color: "#ff9800"
       text-primary-color: "#fff"
-      disabled-text-color: "#555"
+      disabled-text-color: "#ff9800"
       text-dark-color: "#fff"
       primary-background-color: "#37464f"
       sidebar-text_-_background: "#62717b"
