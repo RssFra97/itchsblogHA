@@ -1,0 +1,22 @@
+          - type: entities
+            entities:
+              - input_select.player
+              - input_select.radio
+              - type: button
+                icon: mdi:play
+                name: Play Radio
+                action_name: Toggle light
+                tap_action:
+                  action: call-service
+                  service: script.toggle
+                  service_data:
+                    entity_id: script.play
+              - type: button
+                icon: mdi:stop
+                name: Stop Radio
+                action_name: Toggle light
+                tap_action:
+                  action: call-service
+                  service: script.toggle
+                  service_data:
+                    entity_id: script.stop
