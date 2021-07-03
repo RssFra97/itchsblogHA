@@ -1,0 +1,116 @@
+script:
+  play:
+    alias: Play Radio
+    sequence:
+      - service: media_player.play_media
+        data_template:
+          entity_id:  >-
+            {% if is_state("input_select.player", "Camera") %} media_player.camera
+            {% elif is_state("input_select.player", "Casa") %} media_player.casa
+            {% elif is_state("input_select.player", "RWCHROME") %} media_player.rwchrome
+            {% elif is_state("input_select.player", "RWCHROME4K") %} media_player.rwchrome4k
+            {% elif is_state("input_select.player", "GCamera") %} media_player.gcamera
+            {% elif is_state("input_select.player", "Musica") %} media_player.musica
+            {% endif %}
+          media_content_id:  >-
+            {% if is_state("input_select.radio", "RTL") %} http://shoutcast.rtl.it:3010/
+            {% elif is_state("input_select.radio", "RTL Best") %} http://shoutcast.rtl.it:3020/
+            {% elif is_state("input_select.radio", "RTL ItalianStyle") %} http://shoutcast.rtl.it:3030/
+            {% elif is_state("input_select.radio", "RTL Lounge") %} http://shoutcast.rtl.it:3070/
+            {% elif is_state("input_select.radio", "RTL Radiofreccia") %} http://shoutcast.rtl.it:3060/
+            {% elif is_state("input_select.radio", "Radio Zeta L’Italiana") %} http://shoutcast.rtl.it:3030/stream/1/
+            {% elif is_state("input_select.radio", "Radio Kiss Kiss") %} http://wma08.fluidstream.net:4610/
+            {% elif is_state("input_select.radio", "Radio Kiss Kiss Italia") %} http://wma07.fluidstream.net:3616/;stream.nsv
+            {% elif is_state("input_select.radio", "RDS") %} http://www.rds.it:8000/stream
+            {% elif is_state("input_select.radio", "Radio Deejay") %} http://radiodeejay-lh.akamaihd.net/i/RadioDeejay_Live_1@189857/master.m3u8
+            {% elif is_state("input_select.radio", "R101 Diretta") %} http://wradio.msf.ticdn.it/r101_mp3
+            {% elif is_state("input_select.radio", "Virgin Radio") %} http://icecast.unitedradio.it/virgin.mp3
+            {% elif is_state("input_select.radio", "Radio Capital") %} http://radiocapital-lh.akamaihd.net/i/RadioCapital_Live_1@196312/master.m3u8
+            {% elif is_state("input_select.radio", "Rai Radio 1") %} http://icestreaming.rai.it/1.mp3
+            {% elif is_state("input_select.radio", "Rai Radio 2") %} http://icestreaming.rai.it/2.mp3
+            {% elif is_state("input_select.radio", "Rai Radio 3") %} http://icestreaming.rai.it/3.mp3
+            {% elif is_state("input_select.radio", "Rai IsoRadio") %} http://icestreaming.rai.it/6.mp3
+            {% elif is_state("input_select.radio", "Rai GrParlamento") %} http://icestreaming.rai.it/7.mp3
+            {% elif is_state("input_select.radio", "Radio 105") %} http://icecast.105.net/105.mp3
+            {% elif is_state("input_select.radio", "Radio Monte Carlo") %} http://icecast.unitedradio.it/rmc.mp3
+            {% elif is_state("input_select.radio", "Radio Monte Carlo 2") %} http://shoutcast.unitedradio.it:1107
+            {% elif is_state("input_select.radio", "Radio m2o") %} http://radiom2o-lh.akamaihd.net/i/RadioM2o_Live_1@42518/master.m3u8
+            {% elif is_state("input_select.radio", "Radio 24") %} http://shoutcast.radio24.it:8000/listen.pls
+            {% elif is_state("input_select.radio", "Radio LatteMiele") %} http://onair18.xdevel.com:8014/
+            {% elif is_state("input_select.radio", "Discoradio") %} http://46.37.20.206:1935/live/1discoradio.stream/playlist.m3u8
+            {% elif is_state("input_select.radio", "Radio Norba") %} http://onair20.xdevel.com:8218/
+            {% elif is_state("input_select.radio", "Radio Subasio") %} http://onair18.xdevel.com:8152
+            {% elif is_state("input_select.radio", "Radio Subasio +") %} http://onair11.xdevel.com:8050
+            {% elif is_state("input_select.radio", "Radio Cuore") %} http://nr9.newradio.it:9029
+            {% elif is_state("input_select.radio", "RIN Radio Italia Network") %} http://sr9.inmystream.info:8006
+            {% elif is_state("input_select.radio", "Radio VivaFm") %} http://stream2.vivafm.it:8002/listen.pls
+            {% elif is_state("input_select.radio", "Radio Sempreviva") %} http://stream2.vivafm.it:8000/listen.pls
+            {% endif %}
+          media_content_type: "audio/mp4"
+  stop:
+    alias: Stop Radio
+    sequence:
+      - service: media_player.media_stop
+        data_template:
+          entity_id:  >-
+            {% if is_state("input_select.player", "Camera") %} media_player.camera
+            {% elif is_state("input_select.player", "Casa") %} media_player.casa
+            {% elif is_state("input_select.player", "RWCHROME") %} media_player.rwchrome
+            {% elif is_state("input_select.player", "RWCHROME4K") %} media_player.rwchrome4k
+            {% elif is_state("input_select.player", "GCamera") %} media_player.gcamera
+            {% elif is_state("input_select.player", "Musica") %} media_player.musica
+            {% endif %}
+
+input_select:
+  radio:
+    name: RADIO
+    options:
+      - RTL
+      - RTL Best
+      - RTL ItalianStyle
+      - RTL Lounge
+      - RTL Radiofreccia
+      - Radio Zeta L’Italiana
+      - Radio Kiss Kiss
+      - Radio Kiss Kiss Italia
+      - RDS
+      - Radio Deejay
+      - R101 Diretta
+      - Virgin Radio
+      - Radio Capital
+      - Rai Radio 1
+      - Rai Radio 2
+      - Rai Radio 3
+      - Rai IsoRadio
+      - Rai GrParlamento
+      - Radio 105
+      - Radio Monte Carlo
+      - Radio Monte Carlo 2
+      - Radio m2o
+      - Radio 24
+      - Radio LatteMiele
+      - Discoradio
+      - Radio Norba
+      - Radio Subasio
+      - Radio Subasio +
+      - Radio Cuore
+      - RIN Radio Italia Network
+      - Radio VivaFm
+      - Radio Sempreviva
+  player:
+    name: PLAYER
+    options:
+      - Camera
+      - Casa
+      - RWCHROME
+      - RWCHROME4K
+      - GCamera
+      - Musica
+
+group:
+  web_radio:
+    name: WebRadio
+    entities:
+      - input_select.player
+      - input_select.radio
+      - script.play
