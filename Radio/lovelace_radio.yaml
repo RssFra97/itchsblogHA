@@ -5,7 +5,7 @@
               - type: button
                 icon: mdi:play
                 name: Play Radio
-                action_name: Toggle light
+                action_name: Play Radio
                 tap_action:
                   action: call-service
                   service: script.toggle
@@ -14,7 +14,7 @@
               - type: button
                 icon: mdi:stop
                 name: Stop Radio
-                action_name: Toggle light
+                action_name: Stop Radio
                 tap_action:
                   action: call-service
                   service: script.toggle
