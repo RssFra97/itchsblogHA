@@ -1,0 +1,124 @@
+cover:
+  - platform: mqtt
+    name: "Tenda Camera 2"
+    state_topic: "shellies/NOME-SHELLY25/roller/0"
+    command_topic: "shellies/NOME-SHELLY25/roller/0/command"
+    position_topic: "shellies/NOME-SHELLY25/roller/0/pos"
+    set_position_topic: "shellies/NOME-SHELLY25/roller/0/command/pos"
+    qos: 1
+    retain: false
+    payload_open: "open"
+    payload_close: "close"
+    payload_stop: "stop"
+    state_opening: "open"
+    state_closing: "close"
+    state_stopped: "stop"
+    position_open: 100
+    position_closed: 0
+    optimistic: false
+    value_template: '{{ value }}'
+
+  - platform: mqtt
+    name: "Tenda Camera 1"
+    state_topic: "shellies/NOME-SHELLY25/roller/0"
+    command_topic: "shellies/NOME-SHELLY25/roller/0/command"
+    position_topic: "shellies/NOME-SHELLY25/roller/0/pos"
+    set_position_topic: "shellies/NOME-SHELLY25/roller/0/command/pos"
+    qos: 1
+    retain: false
+    payload_open: "open"
+    payload_close: "close"
+    payload_stop: "stop"
+    state_opening: "open"
+    state_closing: "close"
+    state_stopped: "stop"
+    position_open: 100
+    position_closed: 0
+    optimistic: false
+    value_template: '{{ value }}'
+
+  - platform: group
+    name: "Tende da sole"
+    entities:
+      - cover.tenda_camera_1
+      - cover.tenda_camera_2
+
+sensor:
+  - platform: mqtt
+    state_topic: "shellies/NOME-SHELLY25/roller/0/pos"
+    name: "Posizione Tenda 2"
+
+  - platform: mqtt
+    state_topic: "shellies/NOME-SHELLY25/roller/0/pos"
+    name: "Posizione Tenda 1"
+
+input_number:
+  pos_tenda_2:
+    name: posizione tenda 2
+#    initial: 0
+    min: 0
+    max: 100
+    step: 1
+
+  pos_tenda_1:
+    name: posizione tenda 1
+#    initial: 0
+    min: 0
+    max: 100
+    step: 1
+
+automation:
+  - alias: aggiorna slider tenda 2
+    initial_state: true
+    trigger:
+      platform: mqtt
+      topic: "shellies/NOME-SHELLY25/roller/0/pos"
+    action:
+      service: input_number.set_value
+      data_template:
+        entity_id: input_number.pos_tenda_2
+        value: "{{ trigger.payload }}"
+
+  - alias: aggiorna slider tenda 1
+    initial_state: true
+    trigger:
+      platform: mqtt
+      topic: "shellies/NOME-SHELLY25/roller/0/pos"
+    action:
+      service: input_number.set_value
+      data_template:
+        entity_id: input_number.pos_tenda_1
+        value: "{{ trigger.payload }}"
+
+  - alias: aggiorna tenda 2
+    initial_state: true
+    trigger:
+      platform: state
+      entity_id: input_number.pos_tenda_2
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "shellies/NOME-SHELLY25/roller/0/command/pos"
+          payload_template: "{{ states('input_number.pos_tenda_2') | int }}"
+
+  - alias: aggiorna tenda 1
+    initial_state: true
+    trigger:
+      platform: state
+      entity_id: input_number.pos_tenda_1
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "shellies/NOME-SHELLY25/roller/0/command/pos"
+          payload_template: "{{ states('input_number.pos_tenda_1') | int }}"
+
+  - id: shelly_announce
+    alias: Shelly Announce
+    trigger:
+    - platform: homeassistant
+      event: start
+    action:
+    - service: mqtt.publish
+      data:
+        payload: announce
+        topic: shellies/command

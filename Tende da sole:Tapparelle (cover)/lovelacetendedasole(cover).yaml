@@ -1,0 +1,9 @@
+- type: entities
+  title: Tende Da sole
+  show_header_toggle: false
+  entities:
+      - cover.tenda_camera_1
+      - input_number.pos_tenda_1
+      - cover.tenda_camera_2
+      - input_number.pos_tenda_2
+      - cover.tende_da_sole
