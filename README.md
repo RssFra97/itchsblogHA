@@ -1,4 +1,4 @@
-# itchsblogHA - https://www.itchsblog.it/ - itchs.blog
+# itchsblogHA - https://www.itchsblog.it/
 
 ![myimage-alt-tag](https://i0.wp.com/www.itchsblog.it/wp-content/uploads/2022/08/cropped-rev-01.png?w=3121&ssl=1)
 
