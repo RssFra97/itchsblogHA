@@ -10,4 +10,4 @@ Si posteranno da piccole banalità che però l'iutente non troverà in rete fino
 
 <h1>DONAZIONI</h1>
 
-<a href="https://www.buymeacoffee.com/rssfra97" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 20px !important;width: 77px !important;" ></a>
+<a href="https://www.buymeacoffee.com/rssfra97" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 20px !important;width: 100px !important;" ></a>
