@@ -1,6 +1,6 @@
 # itchsblogHA - https://www.itchsblog.it/
 
-![myimage-alt-tag](https://i1.wp.com/www.itchsblog.it/wp-content/uploads/2019/07/cropped-Logo_Blog.png?w=1541&ssl=1)
+![myimage-alt-tag](https://i0.wp.com/www.itchsblog.it/wp-content/uploads/2022/08/cropped-rev-01.png?w=3121&ssl=1)
 
 Qui troverete esempi - configurazioni - prove per Home Assistant e per l'interfaccia Lovelace.
 
