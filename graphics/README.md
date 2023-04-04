@@ -14,4 +14,6 @@ Si posteranno da piccole banalità che però l'utente non troverà in rete fino 
 
 ![myimage-alt-tag](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png)
 
-Se volete donare per avere più esempi complessi vi lascio il link PayPal https://www.buymeacoffee.com/rssfra97
+<h1>DONAZIONI</h1>
+
+<a href="https://www.buymeacoffee.com/rssfra97" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 75px !important;width: 200px !important;" ></a>
