@@ -14,4 +14,4 @@ Si posteranno da piccole banalità che però l'utente non troverà in rete fino 
 
 ![myimage-alt-tag](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png)
 
-Se volete donare per avere più esempi complessi vi lascio il link PayPal https://paypal.me/itchsblog
+Se volete donare per avere più esempi complessi vi lascio il link PayPal https://www.buymeacoffee.com/rssfra97
