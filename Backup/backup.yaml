@@ -1,0 +1,18 @@
+automation:
+  - alias: Daily Backup
+    description: "Backup lunedì - mercoledì - venerdì"
+    trigger:
+      - platform: time
+        at: "22:00:00"
+    condition:
+      - condition: time
+        weekday:
+          - mon
+          - wed
+          - fri
+    action:
+      - service: hassio.backup_full
+        data:
+          compressed: true
+          name: "Samba_Backup_{{now().year}}_{{now().month}}_{{now().day}}_{{ now().hour}}_{{now().minute}}"
+    mode: single
